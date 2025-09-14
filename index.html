@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dietas Equilibrio - Nutrición práctica y deliciosa con planes personalizados para tus objetivos de salud y bienestar">
+    <title>Dietas Equilibrio - Nutrición práctica y deliciosa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables CSS */
+        :root {
+            /* Colores principales */
+            --primary: #3897f0;
+            --primary-dark: #2872c0;
+            --primary-light: #e1f0ff;
+            --secondary: #4CAF50;
+            --secondary-dark: #3d8b40;
+            --accent: #FF5252;
+            --accent-dark: #e04444;
+            
+            /* Escala de grises */
+            --light: #fafafa;
+            --light-gray: #f5f5f5;
+            --gray-light: #e0e0e0;
+            --gray: #8e8e8e;
+            --gray-dark: #616161;
+            --dark: #262626;
+            
+            /* Colores para tipos de dieta */
+            --keto: #8E44AD;
+            --deportista: #3498DB;
+            --diabeticos: #E67E22;
+            --presion: #E74C3C;
+            --vegana: #2ECC71;
+            --gluten: #F1C40F;
+            --detox: #1ABC9C;
+            
+            /* Efectos y transiciones */
+            --transition: all 0.3s ease;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-dark: 0 8px 30px rgba(0, 0, 0, 0.15);
+            --radius: 10px;
+            --radius-sm: 6px;
+            
+            /* Tipografía */
+            --font-primary: 'Inter', 'Segoe UI', Roboto, sans-serif;
+            --font-size-xs: 0.75rem;    /* 12px */
+            --font-size-sm: 0.875rem;   /* 14px */
+            --font-size-base: 1rem;     /* 16px */
+            --font-size-lg: 1.125rem;   /* 18px */
+            --font-size-xl: 1.25rem;    /* 20px */
+            --font-size-2xl: 1.5rem;    /* 24px */
+            --font-size-3xl: 1.875rem;  /* 30px */
+            --font-size-4xl: 2.25rem;   /* 36px */
+            
+            /* Espaciado */
+            --spacing-xs: 0.25rem;  /* 4px */
+            --spacing-sm: 0.5rem;   /* 8px */
+            --spacing-md: 1rem;     /* 16px */
+            --spacing-lg: 1.5rem;   /* 24px */
+            --spacing-xl: 2rem;     /* 32px */
+            --spacing-2xl: 3rem;    /* 48px */
+            --spacing-3xl: 4rem;    /* 64px */
+        }
+
+        /* Reset y estilos base */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            font-family: var(--font-primary);
+            font-size: var(--font-size-base);
+            overflow-x: hidden;
+        }
+
+        /* Tipografía */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-md);
+        }
+
+        h1 {
+            font-size: var(--font-size-4xl);
+        }
+
+        h2 {
+            font-size: var(--font-size-3xl);
+        }
+
+        h3 {
+            font-size: var(--font-size-2xl);
+        }
+
+        h4 {
+            font-size: var(--font-size-xl);
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul, ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-lg);
+        }
+
+        li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        /* Utilidades */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: var(--font-size-base);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-light {
+            background-color: white;
+            color: var(--primary);
+        }
+
+        .btn-light:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Header */
+        .header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            padding: var(--spacing-xs) 0;
+            box-shadow: var(--shadow-dark);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo i {
+            font-size: var(--font-size-2xl);
+        }
+
+        /* Navegación */
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+            padding: var(--spacing-sm) 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: var(--font-size-2xl);
+            cursor: pointer;
+            color: var(--dark);
+            padding: var(--spacing-sm);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: var(--spacing-3xl) 0;
+            text-align: center;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%233897f0' fill-opacity='0.03' d='M0,160L48,176C96,192,192,224,288,218.7C384,213,480,171,576,165.3C672,160,768,192,864,192C960,192,1056,160,1152,144C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero p {
+            font-size: var(--font-size-lg);
+            color: var(--gray-dark);
+            max-width: 700px;
+            margin: 0 auto var(--spacing-xl);
+        }
+
+        /* Secciones generales */
+        section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .section-title {
+            margin-bottom: var(--spacing-2xl);
+            text-align: center;
+        }
+
+        .section-title h2 {
+            position: relative;
+            display: inline-block;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title p {
+            color: var(--gray);
+            font-size: var(--font-size-lg);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-2xl);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-stats {
+            display: flex;
+            gap: var(--spacing-xl);
+            margin: var(--spacing-lg) 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: var(--font-size-sm);
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .about-image:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .about-image img {
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Diet Types Section */
+        .diet-types {
+            background-color: var(--light-gray);
+        }
+
+        .diet-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .diet-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--spacing-xl) var(--spacing-lg);
+            border-radius: var(--radius);
+            background: white;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .diet-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .diet-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .diet-card:hover::before {
+            opacity: 1;
+        }
+
+        .diet-icon {
+            font-size: 2.8rem;
+            margin-bottom: var(--spacing-lg);
+            transition: var(--transition);
+        }
+
+        .diet-card:hover .diet-icon {
+            transform: scale(1.1);
+        }
+
+        .diet-card h3 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .diet-card p {
+            margin-bottom: var(--spacing-lg);
+            flex-grow: 1;
+        }
+
+        .diet-info-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .diet-info-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Colores para las tarjetas de dieta */
+        .keto {
+            background: linear-gradient(135deg, var(--keto) 0%, #6C3483 100%);
+            color: white;
+        }
+
+        .deportista {
+            background: linear-gradient(135deg, var(--deportista) 0%, #2874A6 100%);
+            color: white;
+        }
+
+        .diabeticos {
+            background: linear-gradient(135deg, var(--diabeticos) 0%, #CA6F1E 100%);
+            color: white;
+        }
+
+        .presion {
+            background: linear-gradient(135deg, var(--presion) 0%, #CB4335 100%);
+            color: white;
+        }
+
+        .vegana {
+            background: linear-gradient(135deg, var(--vegana) 0%, #27AE60 100%);
+            color: white;
+        }
+
+        .gluten {
+            background: linear-gradient(135deg, var(--gluten) 0%, #D4AC0D 100%);
+            color: white;
+        }
+
+        .detox {
+            background: linear-gradient(135deg, var(--detox) 0%, #17A589 100%);
+            color: white;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: var(--spacing-lg);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-content h3 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .service-content p {
+            margin-bottom: var(--spacing-md);
+            flex-grow: 1;
+        }
+
+        .nutrition-info {
+            color: var(--primary);
+            font-size: var(--font-size-sm);
+            margin-top: auto;
+        }
+
+        /* Recipe Highlight */
+        .recipe {
+            background-color: var(--light-gray);
+        }
+
+        .recipe-content {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-2xl);
+        }
+
+        .recipe-image {
+            flex: 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .recipe-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .recipe-text {
+            flex: 1;
+        }
+
+        .recipe-text h3 {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .recipe-text h4 {
+            margin: var(--spacing-lg) 0 var(--spacing-md);
+            color: var(--primary);
+        }
+
+        .recipe-text ul {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: var(--spacing-xl);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.1;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary);
+            font-style: normal;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.1' d='M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,224C672,235,768,181,864,160C960,139,1056,149,1152,165.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto var(--spacing-xl);
+            font-size: var(--font-size-lg);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--spacing-xl) var(--spacing-lg);
+            border-radius: var(--radius);
+            background: white;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .contact-option:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .whatsapp {
+            color: #25D366;
+        }
+
+        .instagram {
+            color: #E1306C;
+        }
+
+        .facebook {
+            color: #3b5998;
+        }
+
+        .threads {
+            color: #000000;
+        }
+
+        .contact-option h3 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .contact-option a {
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: var(--spacing-3xl) 0 var(--spacing-md);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .footer-column h3 {
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--primary);
+            bottom: -8px;
+            left: 0;
+        }
+
+        .footer-column p {
+            color: #ddd;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-column a {
+            color: #ddd;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            transition: var(--transition);
+            font-size: var(--font-size-lg);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+            font-size: var(--font-size-sm);
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow-dark);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 99;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        @keyframes fadeOut {
+            from { 
+                opacity: 1; 
+            }
+            to { 
+                opacity: 0; 
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+            animation-play-state: paused;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .about-content, .recipe-content {
+                gap: var(--spacing-xl);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                position: relative;
+            }
+            
+            .nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: var(--spacing-md);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                display: none;
+                z-index: 99;
+            }
+            
+            .nav.active {
+                display: block;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .auth-buttons {
+                display: none;
+            }
+            
+            .hero {
+                padding: var(--spacing-2xl) 0;
+            }
+            
+            .hero h1 {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .about-content, .recipe-content {
+                flex-direction: column;
+            }
+            
+            .about-stats {
+                justify-content: center;
+            }
+            
+            .stat {
+                min-width: 100px;
+            }
+            
+            .section-title h2 {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .diet-buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid, .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --font-size-3xl: 1.75rem;
+                --font-size-4xl: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .hero p {
+                font-size: var(--font-size-base);
+            }
+            
+            .btn {
+                padding: var(--spacing-sm) var(--spacing-md);
+                font-size: var(--font-size-sm);
+            }
+            
+            .section-title h2 {
+                font-size: var(--font-size-xl);
+            }
+            
+            section {
+                padding: var(--spacing-2xl) 0;
+            }
+            
+            .cta {
+                padding: var(--spacing-2xl) 0;
+            }
+            
+            .cta h2 {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .stat-number {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .diet-icon {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-apple-alt" aria-hidden="true"></i>
+                    <span>Dietas Equilibrio</span>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="nav" aria-label="Navegación principal">
+                    <ul class="nav-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#dietas">Tipos de Dietas</a></li>
+                        <li><a href="#recetas">Recetas</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="loginBtn">
+                        <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+                        <span>Iniciar sesión</span>
+                    </button>
+                    <button class="btn btn-primary" id="registerBtn">
+                        <i class="fas fa-user-plus" aria-hidden="true"></i>
+                        <span>Registrarte</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="fade-in">Transforma tu vida con nutrición práctica y deliciosa</h1>
+                    <p class="fade-in delay-1">Tips diarios de salud, recetas fáciles y planes personalizados para alcanzar tus objetivos de peso y bienestar.</p>
+                    <button class="btn btn-primary fade-in delay-2" id="heroCtaBtn">
+                        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        <span>Comenzar ahora</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="section-title">
+                            <h2>Sobre Dietas Equilibrio</h2>
+                            <p>Tu aliado en el camino hacia una vida más saludable</p>
+                        </div>
+                        <p>Ofrecemos asesoría nutricional personalizada, planes de alimentación equilibrados y rutinas de ejercicio adaptadas a tus necesidades específicas.</p>
+                        
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="stat-number">144+</div>
+                                <div class="stat-label">Publicaciones</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">17K+</div>
+                                <div class="stat-label">Seguidores</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">600+</div>
+                                <div class="stat-label">Clientes satisfechos</div>
+                            </div>
+                        </div>
+                        
+                        <p>Nuestra misión es proveerte las herramientas y el conocimiento necesarios para que puedas lograr tus objetivos de manera sostenible, sin dietas extremas ni soluciones milagro.</p>
+                    </div>
+                    <div class="about-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Alimentos saludables variados" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diet Types Section -->
+        <section id="dietas" class="diet-types">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nuestros Planes de Dieta Especializados</h2>
+                    <p>Selecciona el plan que mejor se adapte a tus necesidades y objetivos</p>
+                </div>
+                
+                <div class="diet-buttons">
+                    <article class="diet-card keto fade-in">
+                        <div class="diet-icon">
+                            <i class="fas fa-bacon" aria-hidden="true"></i>
+                        </div>
+                        <h3>Dieta Keto</h3>
+                        <p>Plan bajo en carbohidratos y alto en grasas saludables para quemar grasa efectivamente</p>
+                        <button class="diet-info-btn" aria-label="Más información sobre dieta Keto">+ Info</button>
+                    </article>
+                    
+                    <article class="diet-card deportista fade-in delay-1">
+                        <div class="diet-icon">
+                            <i class="fas fa-running" aria-hidden="true"></i>
+                        </div>
+                        <h3>Para Deportistas</h3>
+                        <p>Alimentación optimizada para maximizar rendimiento y recuperación muscular</p>
+                        <button class="diet-info-btn" aria-label="Más información sobre dieta para deportistas">+ Info</button>
+                    </article>
+                    
+                    <article class="diet-card diabeticos fade-in delay-2">
+                        <div class="diet-icon">
+                            <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                        </div>
+                        <h3>Para Diabéticos</h3>
+                        <p>Control glucémico a través de alimentos con bajo índice glucémico y porciones balanceadas</p>
+                        <button class="diet-info-btn" aria-label="Más información sobre dieta para diabéticos">+ Info</button>
+                    </article>
+                    
+                    <article class="diet-card presion fade-in delay-3">
+                        <div class="diet-icon">
+                            <i class="fas fa-tint-slash" aria-hidden="true"></i>
+                        </div>
+                        <h3>Para Hipertensos</h3>
+                        <p>Plan bajo en sodio y rico en potasio para controlar la presión arterial</p>
+                        <button class="diet-info-btn" aria-label="Más información sobre dieta para hipertensos">+ Info</button>
+                    </article>
+                    
+                    <article class="diet-card vegana fade-in">
+                        <div class="diet-icon">
+                            <i class="fas fa-leaf" aria-hidden="true"></i>
+                        </div>
+                        <h3>Dieta Vegana</h3>
+                        <p>Nutrición 100% basada en plantas con todos los nutrientes esenciales</p>
+                        <button class="diet-info-btn" aria-label="Más información sobre dieta vegana">+ Info</button>
+                    </article>
+                    
+                    <article class="diet-card gluten fade-in delay-1">
+                        <div class="diet-icon">
+                            <i class="fas fa-bread-slice" aria-hidden="true"></i>
+                        </div>
+                        <h3>Sin Gluten</h3>
+                        <p>Deliciosas opciones para celíacos o sensibles al gluten</p>
+                        <button class="diet-info-btn" aria-label="Más información sobre dieta sin gluten">+ Info</button>
+                    </article>
+                    
+                    <article class="diet-card detox fade-in delay-2">
+                        <div class="diet-icon">
+                            <i class="fas fa-apple-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3>Dieta Detox</h3>
+                        <p>Limpieza corporal con alimentos depurativos y antioxidantes</p>
+                        <button class="diet-info-btn" aria-label="Más información sobre dieta detox">+ Info</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Nuestros Servicios</h2>
+                    <p>Ofrecemos soluciones personalizadas para tus objetivos específicos</p>
+                </div>
+                
+                <div class="services-grid">
+                    <article class="service-card fade-in">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Pérdida de peso" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3>Pérdida de Peso</h3>
+                            <p>Plan nutricional y rutinas de ejercicio diseñadas para quemar grasa efectivamente mientras mantienes energía y vitalidad.</p>
+                            <p class="nutrition-info"><strong>328 kcal • 49g Carb • 6g Grasa</strong></p>
+                        </div>
+                    </article>
+                    
+                    <article class="service-card fade-in delay-1">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Ganancia muscular" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3>Ganancia Muscular</h3>
+                            <p>Programa de alimentación y entrenamiento enfocado en desarrollo muscular con la proporción ideal de nutrientes.</p>
+                            <p class="nutrition-info"><strong>64g Proteína • 81g Carb • 6g Grasa</strong></p>
+                        </div>
+                    </article>
+                    
+                    <article class="service-card fade-in delay-2">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Salud hormonal" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <h3>Salud Hormonal</h3>
+                            <p>Alimentos y suplementos para equilibrar tu sistema hormonal y mejorar tu bienestar general.</p>
+                            <p>Colina para el cerebro y sistema nervioso. Promueve la vitalidad.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Highlight -->
+        <section id="recetas" class="recipe">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Recetas Destacadas</h2>
+                    <p>Comida saludable y deliciosa para tu día a día</p>
+                </div>
+                
+                <div class="recipe-content">
+                    <div class="recipe-image fade-in">
+                        <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Jugo de verduras detox" loading="lazy">
+                    </div>
+                    <div class="recipe-text fade-in delay-1">
+                        <h3>Jugo Detox de Verduras</h3>
+                        <p>"Toma este jugo de verduras" para limpiar tu organismo y llenarte de energía.</p>
+                        <h4>Ingredientes:</h4>
+                        <ul>
+                            <li>1/2 Pepino</li>
+                            <li>1 Limón</li>
+                            <li>1 Rábano chico</li>
+                            <li>1 Taza de uvas verdes</li>
+                            <li>1 Tallo de brócoli</li>
+                        </ul>
+                        <p>Mezcla todos los ingredientes en una licuadora, cuela y bebe fresco por las mañanas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonios" class="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Testimonios</h2>
+                    <p>Lo que dicen nuestros clientes</p>
+                </div>
+                
+                <div class="testimonial-grid">
+                    <blockquote class="testimonial-card fade-in">
+                        <div class="testimonial-text">
+                            "Perdí 15 kg en 3 meses con el plan de Dietas Equilibrio. Las recetas son deliciosas y fáciles de preparar. ¡Lo recomiendo totalmente!"
+                        </div>
+                        <cite class="testimonial-author">- María L.</cite>
+                    </blockquote>
+                    
+                    <blockquote class="testimonial-card fade-in delay-1">
+                        <div class="testimonial-text">
+                            "Gracias a la asesoría personalizada pude ganar masa muscular sin aumentar mi porcentaje de grasa. Los resultados son increíbles."
+                        </div>
+                        <cite class="testimonial-author">- Carlos R.</cite>
+                    </blockquote>
+                    
+                    <blockquote class="testimonial-card fade-in delay-2">
+                        <div class="testimonial-text">
+                            "Los tips diarios y el seguimiento constante me ayudaron a crear hábitos saludables que mantengo hasta hoy. Mi energía aumentó notablemente."
+                        </div>
+                        <cite class="testimonial-author">- Ana G.</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contacto" class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>¿Listo para transformar tu vida?</h2>
+                    <p>Comienza hoy mismo tu journey hacia una versión más saludable y feliz de ti mismo. Nuestros expertos están listos para guiarte en cada paso del camino.</p>
+                    <button class="btn btn-light" id="contactCtaBtn">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        <span>Contactar ahora</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contáctanos</h2>
+                    <p>Estamos aquí para ayudarte a alcanzar tus objetivos</p>
+                </div>
+                
+                <div class="contact-options">
+                    <div class="contact-option fade-in">
+                        <div class="contact-icon whatsapp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <a href="https://api.whatsapp.com/send?phone=5493425473294" target="_blank" rel="noopener noreferrer">+54 9 342 547-3294</a>
+                    </div>
+                    
+                    <div class="contact-option fade-in delay-1">
+                        <div class="contact-icon instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <h3>Instagram</h3>
+                        <a href="https://www.instagram.com/dietas_equilibrio/?hl=es-la" target="_blank" rel="noopener noreferrer">@dietas_equilibrio</a>
+                    </div>
+                    
+                    <div class="contact-option fade-in delay-2">
+                        <div class="contact-icon facebook">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <h3>Facebook</h3>
+                        <a href="https://www.facebook.com/people/Dietas-Equilibrio/61551984779751/" target="_blank" rel="noopener noreferrer">Dietas Equilibrio</a>
+                    </div>
+                    
+                    <div class="contact-option fade-in delay-3">
+                        <div class="contact-icon threads">
+                            <i class="fab fa-threads" aria-hidden="true"></i>
+                        </div>
+                        <h3>Threads</h3>
+                        <a href="https://www.threads.net/@dietas_equilibrio" target="_blank" rel="noopener noreferrer">@dietas_equilibrio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Dietas Equilibrio</h3>
+                    <p>Nutrición práctica y deliciosa para transformar tu vida.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#dietas">Tipos de Dieta</a></li>
+                        <li><a href="#recetas">Recetas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><a href="https://api.whatsapp.com/send?phone=5493425473294" target="_blank" rel="noopener noreferrer">WhatsApp: +54 9 342 547-3294</a></li>
+                        <li><a href="https://www.instagram.com/dietas_equilibrio/?hl=es-la" target="_blank" rel="noopener noreferrer">Instagram: @dietas_equilibrio</a></li>
+                        <li><a href="https://www.facebook.com/people/Dietas-Equilibrio/61551984779751/" target="_blank" rel="noopener noreferrer">Facebook: Dietas Equilibrio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/dietas_equilibrio/?hl=es-la" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=5493425473294" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/people/Dietas-Equilibrio/61551984779751/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.threads.net/@dietas_equilibrio" target="_blank" rel="noopener noreferrer" aria-label="Threads"><i class="fab fa-threads"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Dietas Equilibrio. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <script>
+        // Funcionalidad para el menú móvil
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('.nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            const isExpanded = nav.classList.contains('active');
+            mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+            mobileMenuBtn.innerHTML = isExpanded ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Funcionalidad para los botones de tipos de dieta
+        document.querySelectorAll('.diet-info-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const dietCard = this.closest('.diet-card');
+                const dietType = dietCard.querySelector('h3').textContent;
+                
+                // Crear notificación
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    bottom: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--primary);
+                    color: white;
+                    padding: 15px 25px;
+                    border-radius: 30px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                    z-index: 1000;
+                    font-weight: 500;
+                    animation: fadeIn 0.5s ease;
+                `;
+                notification.textContent = `¡Excelente elección! Pronto te contactaremos sobre nuestro plan de ${dietType}`;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.animation = 'fadeOut 0.5s ease forwards';
+                    setTimeout(() => notification.remove(), 500);
+                }, 3000);
+            });
+        });
+        
+                // Smooth scrolling para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Cerrar menú móvil si está abierto
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    
+                    // Calcular posición considerando el header fijo
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Funcionalidad para el botón "Volver arriba"
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+            
+            // Efecto de header al hacer scroll
+            const header = document.querySelector('.header');
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Activar animaciones cuando los elementos son visibles
+            activateAnimations();
+        });
+        
+        // Animaciones al cargar la página y al hacer scroll
+        function activateAnimations() {
+            document.querySelectorAll('.fade-in').forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.animationPlayState = 'running';
+                }
+            });
+        }
+        
+        // Activar animaciones al cargar la página
+        window.addEventListener('DOMContentLoaded', () => {
+            activateAnimations();
+            
+            // Event listeners para los botones de llamada a la acción
+            document.getElementById('heroCtaBtn').addEventListener('click', () => {
+                document.querySelector('#contacto').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            document.getElementById('contactCtaBtn').addEventListener('click', () => {
+                document.querySelector('.contact').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Event listeners para los botones de autenticación
+            document.getElementById('loginBtn').addEventListener('click', () => {
+                showAuthNotification('Iniciar sesión');
+            });
+            
+            document.getElementById('registerBtn').addEventListener('click', () => {
+                showAuthNotification('Registrarse');
+            });
+        });
+        
+        // Mostrar notificación para funciones de autenticación
+        function showAuthNotification(action) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--primary);
+                color: white;
+                padding: 15px 25px;
+                border-radius: 30px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                z-index: 1000;
+                font-weight: 500;
+                animation: fadeIn 0.5s ease;
+            `;
+            notification.textContent = `Función de ${action} en desarrollo. Próximamente disponible.`;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'fadeOut 0.5s ease forwards';
+                setTimeout(() => notification.remove(), 500);
+            }, 3000);
+        }
+        
+        // Optimización de imágenes lazy loading
+        if ('loading' in HTMLImageElement.prototype) {
+            // El navegador soporta lazy loading nativo
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                img.src = img.src;
+            });
+        } else {
+            // Fallback para navegadores que no soportan lazy loading
+            document.addEventListener('DOMContentLoaded', () => {
+                const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+                
+                if ('IntersectionObserver' in window) {
+                    const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                const lazyImage = entry.target;
+                                lazyImage.src = lazyImage.src;
+                                lazyImageObserver.unobserve(lazyImage);
+                            }
+                        });
+                    });
+                    
+                    lazyImages.forEach(function(lazyImage) {
+                        lazyImageObserver.observe(lazyImage);
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
